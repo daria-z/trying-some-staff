@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <form id="user-form" method="POST" action="/user">
+      <p>
+        <label for="name">Имя:</label>
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          autofocus
+          required
+          placeholder="Ваше имя"
+        />
+      </p>
+      <p>
+        <label for="last-name">Фамилия:</label>
+        <input type="text" name="last-name" id="last-name" autofocus required
+          placeholder="Ваша фамилия" />
+      </p>
+      <p>
+        <label for="email">Email: </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Ваша почта"
+          required
+        />
+      </p>
+      <p>
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" required>
+      </p>
+      <p>
+        <label for="password-confirm">Подтверждение пароля:</label>
+        <input type="password" name="password-confirm" id="password-confirm">
+      </p>
+      <p>
+        <label for="birth-day">Дата рождения:</label>
+        <input type="date" name="birth-day" id="birth-day">
+      </p>
+      <br />
+      <button id="form-button" type="submit" disabled>Отправить</button>
+    </form>
+  </body>
+</html>
