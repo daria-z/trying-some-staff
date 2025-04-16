@@ -60,6 +60,15 @@ const state = {
 };
 
 const render = () => {
+  Object.keys(state.formData).forEach(input => {
+    const node = document.querySelector(`#${input}`);
+    if (state.formData[input].status === 'pending') {
+      node.classList.add('pending');
+    }
+    if (state.formData[input].status === "invalid") {
+      node.classList.remove("pending");
+    }
+  })
   submitButton.disabled = (state.form.status !== 'valid');
 };
 
